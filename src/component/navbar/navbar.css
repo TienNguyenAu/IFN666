@@ -3,6 +3,9 @@
     height: 4rem;
     object-fit: cover;
 }
+.logo:hover{
+    cursor: pointer;
+}
 .destopMenuIMG{
     width: 20px;
     height: 20px;
