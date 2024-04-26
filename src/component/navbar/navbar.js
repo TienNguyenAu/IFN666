@@ -7,7 +7,13 @@ import {Link} from 'react-scroll';
 const Navbar = () => {
   return (
     <nav className="navbar">
-      <img src={logo} alt="logo" className="logo"/>
+      <Link activeClass="active"
+        to="intro"
+        spy={true}
+        smooth={true}
+        offset={-70}
+        duration={500}><img src={logo} alt="logo" className="logo"/></Link>
+      
       <div className="desktopMenu">
       <Link 
         className="destopMenuListItem"
@@ -27,7 +33,14 @@ const Navbar = () => {
         offset={-70}
         duration={500} >About</Link>
       <Link className="destopMenuListItem">Résume</Link>
-      <Link className="destopMenuListItem">Portfolio</Link>
+      <Link className="destopMenuListItem"
+        activeClass="active"
+        to="port"
+        spy={true}
+        smooth={true}
+        offset={-70}
+        duration={500}
+      >Portfolio</Link>
       </div>
       <button className="destopMenuBtn">
         <img src={contactImg} alt="" className="destopMenuIMG"/> Contact Me
