@@ -16,9 +16,10 @@ const Portfolio = () => {
           <img src={Portfolio2} alt="" className="prtImg"/>
           <img src={Portfolio3} alt="" className="prtImg"/>  
         </div>
-        <button className="prtBtn">
-        <img src={Go} alt="" className="prtBtnImg"/> See More
-      </button>
+        <button className="prtBtn" onClick={() => window.location.href = "https://github.com/TienNguyenAu"}>
+          <img src={Go} alt="" className="prtBtnImg"/> See More
+        </button>
+
     </section>
   )
 }
