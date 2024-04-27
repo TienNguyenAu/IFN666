@@ -6,13 +6,13 @@
 .logo:hover{
     cursor: pointer;
 }
-.destopMenuIMG{
+.desktopMenuIMG{
     width: 20px;
     height: 20px;
     object-fit: cover;
     margin: 1rem;
 }
-.destopMenuBtn{
+.desktopMenuBtn{
     background: white;
     color: black;
     font-weight: bold;
@@ -22,7 +22,7 @@
     padding: 0 1rem;
     border-radius: 2rem;
 }
-.destopMenuBtn:hover{
+.desktopMenuBtn:hover{
     background: red;
     cursor: pointer;
 }
@@ -39,12 +39,62 @@
     z-index: 3;
     background: rgb(36, 36, 36);
 }
-.destopMenuListItem{
+.desktopMenuListItem{
     margin:  1rem;
     cursor: pointer;
 }
-.destopMenuListItem:hover{
+.desktopMenuListItem:hover{
     color: red;
     padding-bottom: 0.5rem;
     border-bottom: 5px solid;
+}
+.active{
+    color: red;
+    padding-bottom: 0.5rem;
+    border-bottom: 3px red solid;
+}
+
+.navMenu{
+    position: absolute;
+    top: 4rem;
+    right: 2rem;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    padding: 0.5rem;
+    height: fit-content;
+    min-width: 15rem;
+    background: rgb(50, 50, 50);
+    border-radius: 1rem;
+}
+
+.listItem{
+    color: white;
+    padding: 0.5rem 3rem;
+    margin: 0.25rem;
+    background: rgb(50, 50, 50);
+    cursor: pointer;
+}
+.listItem:hover{
+    color: red;
+    padding-bottom: 0.5rem;
+    border-bottom: 5px solid;
+}
+.mobMenu{
+    display: none;
+    object-fit: cover;
+    height: 1.8rem;
+}
+
+@media screen and (max-width : 720px) {
+    .mobMenu{
+        display: flex;
+    }
+    .desktopMenu{
+        display: none;
+    }
+    .desktopMenuBtn{
+        display: none;
+    }
+    
 }

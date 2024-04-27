@@ -1,39 +1,42 @@
-import React from 'react';
+import React, { useState } from 'react';
 import'./navbar.css';
 import logo from '../../assets/logo.png';
 import contactImg from '../../assets/chat-box.png';
+import Burger from '../../assets/burgerbtn.png';
 import {Link} from 'react-scroll';
 
 const Navbar = () => {
+  const [showMenu, setShowMenu] = useState (false);
   return (
     <nav className="navbar">
-      <Link activeClass="active"
+      <Link activeClass="actives"
         to="intro"
         spy={true}
         smooth={true}
-        offset={-70}
+        offset={-100}
         duration={500}><img src={logo} alt="logo" className="logo"/></Link>
-      
       <div className="desktopMenu">
       <Link 
-        className="destopMenuListItem"
+        className="desktopMenuListItem"
         activeClass="active"
         to="intro"
         spy={true}
         smooth={true}
-        offset={-70}
+        offset={-100}
         duration={500}
       >Home</Link>
       <Link 
-        className="destopMenuListItem"
+        className="desktopMenuListItem"
         activeClass="active"
         to="abouts"
         spy={true}
         smooth={true}
         offset={-70}
         duration={500} >About</Link>
-      <Link className="destopMenuListItem">Résume</Link>
-      <Link className="destopMenuListItem"
+
+      <Link className="desktopMenuListItem">Résume</Link>
+
+      <Link className="desktopMenuListItem"
           activeClass="active"
           to="port"
           spy={true}
@@ -43,17 +46,26 @@ const Navbar = () => {
       >Portfolio</Link>
       </div>
       <Link
-      activeClass="active"
+        activeClass="actives"
           to="contact"
           spy={true}
           smooth={true}
-          offset={-70}
+          offset={-50}
           duration={500}>
-            <button className="destopMenuBtn">
-             <img src={contactImg} alt="" className="destopMenuIMG"/> Contact Me
+            <button className="desktopMenuBtn">
+             <img src={contactImg} alt="" className="desktopMenuIMG"/> Contact Me
             </button>    
       </Link>
-    </nav>
+
+      <img src={Burger} alt="menu" className="mobMenu" onClick={()=>setShowMenu(!showMenu)}/>
+      <div className='navMenu' style={{display: showMenu? 'flex':'none'}}>
+        <Link className="ListItem" onClick={()=>setShowMenu(false)} activeClass="active" to="intro" spy={true} smooth={true} offset={-100} duration={500}>Home</Link>
+        <Link className="ListItem" onClick={()=>setShowMenu(false)} activeClass="active" to="abouts" spy={true} smooth={true} offset={-100} duration={500}>About</Link>
+        <Link className="ListItem" onClick={()=>setShowMenu(false)} activeClass="active" to="contact" spy={true} smooth={true} offset={-100} duration={500}>Résume</Link>
+        <Link className="ListItem" onClick={()=>setShowMenu(false)} activeClass="active" to="port" spy={true} smooth={true} offset={-100} duration={500}>Portfolio</Link>
+        <Link className="ListItem" onClick={()=>setShowMenu(false)} activeClass="active" to="contact" spy={true} smooth={true} offset={-100} duration={500}>Contact Me</Link>
+      </div>
+      </nav>
   )
 }
 
