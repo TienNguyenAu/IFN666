@@ -34,17 +34,25 @@ const Navbar = () => {
         duration={500} >About</Link>
       <Link className="destopMenuListItem">Résume</Link>
       <Link className="destopMenuListItem"
-        activeClass="active"
-        to="port"
-        spy={true}
-        smooth={true}
-        offset={-70}
-        duration={500}
+          activeClass="active"
+          to="port"
+          spy={true}
+          smooth={true}
+          offset={-70}
+          duration={500}
       >Portfolio</Link>
       </div>
-      <button className="destopMenuBtn">
-        <img src={contactImg} alt="" className="destopMenuIMG"/> Contact Me
-      </button>
+      <Link
+      activeClass="active"
+          to="contact"
+          spy={true}
+          smooth={true}
+          offset={-70}
+          duration={500}>
+            <button className="destopMenuBtn">
+             <img src={contactImg} alt="" className="destopMenuIMG"/> Contact Me
+            </button>    
+      </Link>
     </nav>
   )
 }
