@@ -1,0 +1,109 @@
+/* Define custom styles */
+.repo-container {
+  background-color: rgb(50, 50, 50);
+  padding: 1.25rem; /* Equivalent to p-5 */
+  border-radius: 0.5rem; /* Equivalent to rounded */
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Equivalent to shadow */
+}
+
+.repo-container .flex-container {
+  display: flex;
+  align-items: center;
+}
+
+.repo-container .avatar {
+  width: 4rem; /* Equivalent to w-16 */
+  height: 4rem; /* Equivalent to h-16 */
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.1); /* Equivalent to shadow */
+  border-radius: 9999px; /* Equivalent to rounded-full */
+}
+
+.repo-container .list {
+  margin-left: 1.25rem; /* Equivalent to ml-5 */
+}
+
+.repo-container .repo-name {
+  font-weight: bold; /* Equivalent to font-bold */
+  font-size: 1.25rem; /* Equivalent to text-xl */
+}
+
+.repo-container .repo-status {
+  display: inline-block;
+  padding: 0.25rem 0.5rem; /* Equivalent to py-1 px-2 */
+  border-radius: 0.25rem; /* Equivalent to rounded-lg */
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.1); /* Equivalent to shadow */
+  font-size: 0.75rem; /* Equivalent to text-xs */
+  opacity: 0.75;
+}
+
+.repo-container .repo-status-private {
+  background-color: #e53e3e; /* Equivalent to bg-rose-700 */
+  color: white;
+}
+
+.repo-container .repo-status-public {
+  background-color: #48bb78; /* Equivalent to bg-emerald-700 */
+  color: white;
+}
+
+.repo-container .repo-info {
+  margin-top: 1.25rem; /* Equivalent to mt-5 */
+}
+
+.repo-container .repo-info p {
+  font-size: 0.875rem; /* Equivalent to text-sm */
+}
+
+.repo-container .repo-link {
+  text-decoration: underline; /* Equivalent to underline */
+  font-size: 0.875rem; /* Equivalent to text-sm */
+}
+
+.repo-container .stars-watchers {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 1.25rem; /* Equivalent to mt-5 */
+}
+
+.repo-container .language-topics {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.repo-container .repo-language {
+  padding: 0.25rem 0.5rem; /* Equivalent to py-1 px-2 */
+  border-radius: 0.25rem; /* Equivalent to rounded-lg */
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.1); /* Equivalent to shadow */
+  font-size: 0.75rem; /* Equivalent to text-xs */
+  opacity: 0.75;
+}
+
+.repo-container .repo-topic {
+  padding: 0.25rem 0.5rem; /* Equivalent to py-1 px-2 */
+  border-radius: 0.25rem; /* Equivalent to rounded-lg */
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.1); /* Equivalent to shadow */
+  font-size: 0.75rem; /* Equivalent to text-xs */
+  opacity: 0.75;
+  margin-right: 0.5rem; /* Spacing between topics */
+}
+
+.repo-container .repo-issues {
+  font-size: 0.875rem; /* Equivalent to text-sm */
+}
+
+.repo-button {
+  background-color: #3182ce; /* Choose your desired background color */
+  color: white;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  margin-right: 2rem;
+  margin-left: 2rem;
+}
+
+.repo-button:hover {
+  background-color: #2c5282; /* Darker shade for hover effect */
+}
