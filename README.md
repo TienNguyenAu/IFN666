@@ -6,16 +6,16 @@ This project is builed to make react portfolio websites while delving into the i
 
 This portfolio website is made
 
-With the help templte on this video https://youtu.be/4ag1LsgIUc0?si=OrGc2Ni-lQsUN1Ou
-Github API to get the repositories information.
-EmailJS to give email from the form contact me. (added license)
-MUI for the forms and button.(added license)
+With the help templte on this video https://youtu.be/4ag1LsgIUc0?si=OrGc2Ni-lQsUN1Ou </br>
+Github API to get the repositories information.</br>
+EmailJS to give email from the form contact me. (added license.)</br>
+MUI for the forms and button.(added license.)</br>
 
 ### Features
 
-Download resume;
-import repos form Git Hub;
-able to send message through email with EmailJS
+Download resume;</br>
+Import repos form Git Hub;</br>
+Able to send message through email with EmailJS</br>
 
 ### Dependencies
 
@@ -37,9 +37,9 @@ able to send message through email with EmailJS
     "styled-components": "^6.1.8",
     "web-vitals": "^2.1.4"
 
-**Note: These dependencies will be install when using npm install**
+**Note: These dependencies will be install when using npm install.**
 
-**Note: After running npm install run npm start to begin**
+**Note: After running npm install run npm start to begin.**
 
 ### Architecture
 
@@ -52,5 +52,5 @@ Components:
 - Portfolio page
 - Contact page
 
-In this, website will enders the component when click.
+In this, website will enders the component when click.</br>
 Ex: Landing page will render Navbar, home page, and footer.
