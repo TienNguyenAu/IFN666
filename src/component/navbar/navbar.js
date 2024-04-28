@@ -33,6 +33,14 @@ const Navbar = () => {
         smooth={true}
         offset={-70}
         duration={500} >About</Link>
+        <Link 
+        className="desktopMenuListItem"
+        activeClass="active"
+        to="resume"
+        spy={true}
+        smooth={true}
+        offset={-80}
+        duration={500} >Résume</Link>
       <Link className="desktopMenuListItem"
           activeClass="active"
           to="port"
@@ -41,9 +49,6 @@ const Navbar = () => {
           offset={-70}
           duration={500}
       >Portfolio</Link>
-
-      <Link className="desktopMenuListItem">Résume</Link>
-
       </div>
       <Link
         activeClass="actives"
