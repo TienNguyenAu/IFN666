@@ -5,7 +5,8 @@ import Qut  from '../../assets/qut.png'
 import ContactForm from './contactform'
 
 
-const contact = () => {
+const Contact = () => {
+  
   return (
     <section id="contactPage">
         <div id="education">
@@ -28,4 +29,4 @@ const contact = () => {
   )
 }
 
-export default contact
+export default Contact

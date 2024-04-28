@@ -8,7 +8,7 @@ import {Link} from 'react-scroll';
 const Navbar = () => {
   const [showMenu, setShowMenu] = useState (false);
   return (
-    <nav className="navbar">
+    <nav className="navbar"> {/* Navigation  Bar for website*/}
       <Link activeClass="actives"
         to="intro"
         spy={true}
@@ -33,9 +33,6 @@ const Navbar = () => {
         smooth={true}
         offset={-70}
         duration={500} >About</Link>
-
-      <Link className="desktopMenuListItem">Résume</Link>
-
       <Link className="desktopMenuListItem"
           activeClass="active"
           to="port"
@@ -44,6 +41,9 @@ const Navbar = () => {
           offset={-70}
           duration={500}
       >Portfolio</Link>
+
+      <Link className="desktopMenuListItem">Résume</Link>
+
       </div>
       <Link
         activeClass="actives"
@@ -57,7 +57,7 @@ const Navbar = () => {
             </button>    
       </Link>
 
-      <img src={Burger} alt="menu" className="mobMenu" onClick={()=>setShowMenu(!showMenu)}/>
+      <img src={Burger} alt="menu" className="mobMenu" onClick={()=>setShowMenu(!showMenu)}/> {/* Navigation  Bar for smaller screen*/}
       <div className='navMenu' style={{display: showMenu? 'flex':'none'}}>
         <Link className="ListItem" onClick={()=>setShowMenu(false)} activeClass="active" to="intro" spy={true} smooth={true} offset={-100} duration={500}>Home</Link>
         <Link className="ListItem" onClick={()=>setShowMenu(false)} activeClass="active" to="abouts" spy={true} smooth={true} offset={-100} duration={500}>About</Link>
