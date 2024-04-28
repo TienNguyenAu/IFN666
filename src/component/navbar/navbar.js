@@ -3,72 +3,30 @@ import'./navbar.css';
 import logo from '../../assets/logo.png';
 import contactImg from '../../assets/chat-box.png';
 import Burger from '../../assets/burgerbtn.png';
-import {Link} from 'react-scroll';
 
-const Navbar = () => {
+
+function Navbar({ onNavbarClick }) {
   const [showMenu, setShowMenu] = useState (false);
   return (
     <nav className="navbar"> {/* Navigation  Bar for website*/}
-      <Link activeClass="actives"
-        to="intro"
-        spy={true}
-        smooth={true}
-        offset={-100}
-        duration={500}><img src={logo} alt="logo" className="logo"/></Link>
+      <img src={logo} alt="logo" className="logo" onClick={() => onNavbarClick('info')}/>
       <div className="desktopMenu">
-      <Link 
-        className="desktopMenuListItem"
-        activeClass="active"
-        to="intro"
-        spy={true}
-        smooth={true}
-        offset={-100}
-        duration={500}
-      >Home</Link>
-      <Link 
-        className="desktopMenuListItem"
-        activeClass="active"
-        to="abouts"
-        spy={true}
-        smooth={true}
-        offset={-70}
-        duration={500} >About</Link>
-        <Link 
-        className="desktopMenuListItem"
-        activeClass="active"
-        to="resume"
-        spy={true}
-        smooth={true}
-        offset={-80}
-        duration={500} >Résume</Link>
-      <Link className="desktopMenuListItem"
-          activeClass="active"
-          to="port"
-          spy={true}
-          smooth={true}
-          offset={-70}
-          duration={500}
-      >Portfolio</Link>
+        <a className="desktopMenuListItem" activeClass="active" to="intro"  onClick={() => onNavbarClick('info')}>Home</a>
+        <a className="desktopMenuListItem" activeClass="active" to="abouts"  onClick={() => onNavbarClick('about')}>About</a>
+        <a className="desktopMenuListItem" activeClass="active" to="resume"  onClick={() => onNavbarClick('resume')}>Résume</a>
+        <a className="desktopMenuListItem" activeClass="active" to="port"  onClick={() => onNavbarClick('portfolio')}>Portfolio</a>
       </div>
-      <Link
-        activeClass="actives"
-          to="contact"
-          spy={true}
-          smooth={true}
-          offset={-50}
-          duration={500}>
-            <button className="desktopMenuBtn">
-             <img src={contactImg} alt="" className="desktopMenuIMG"/> Contact Me
-            </button>    
-      </Link>
+      <button className="desktopMenuBtn" onClick={() => onNavbarClick('contact')}>
+             <img src={contactImg} alt="" className="desktopMenuIMG" /> Contact Me
+      </button>
 
       <img src={Burger} alt="menu" className="mobMenu" onClick={()=>setShowMenu(!showMenu)}/> {/* Navigation  Bar for smaller screen*/}
       <div className='navMenu' style={{display: showMenu? 'flex':'none'}}>
-        <Link className="ListItem" onClick={()=>setShowMenu(false)} activeClass="active" to="intro" spy={true} smooth={true} offset={-100} duration={500}>Home</Link>
-        <Link className="ListItem" onClick={()=>setShowMenu(false)} activeClass="active" to="abouts" spy={true} smooth={true} offset={-100} duration={500}>About</Link>
-        <Link className="ListItem" onClick={()=>setShowMenu(false)} activeClass="active" to="contact" spy={true} smooth={true} offset={-100} duration={500}>Résume</Link>
-        <Link className="ListItem" onClick={()=>setShowMenu(false)} activeClass="active" to="port" spy={true} smooth={true} offset={-100} duration={500}>Portfolio</Link>
-        <Link className="ListItem" onClick={()=>setShowMenu(false)} activeClass="active" to="contact" spy={true} smooth={true} offset={-100} duration={500}>Contact Me</Link>
+        <a className="ListItem" onClick={()=>{setShowMenu(false);onNavbarClick('info')}} activeClass="active" to="intro" >Home</a>
+        <a className="ListItem" onClick={()=>{setShowMenu(false);onNavbarClick('about')}} activeClass="active" to="abouts" >About</a>
+        <a className="ListItem" onClick={()=>{setShowMenu(false);onNavbarClick('resume')}} activeClass="active" to="resume" >Résume</a>
+        <a className="ListItem" onClick={()=>{setShowMenu(false);onNavbarClick('portfolio')}} activeClass="active" to="port" >Portfolio</a>
+        <a className="ListItem" onClick={()=>{setShowMenu(false);onNavbarClick('contact')}} activeClass="active" to="contact" >Contact Me</a>
       </div>
       </nav>
   )

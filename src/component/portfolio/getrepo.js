@@ -24,7 +24,7 @@ const Getrepo = () => {
     <>
       <div className="pt-10">
         <h1 className="mb-10 font-bold text-2xl">
-          Viewing {user}'s repositories
+            {user}'s repositories
         </h1>
       </div>
 

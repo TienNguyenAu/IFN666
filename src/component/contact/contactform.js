@@ -40,6 +40,7 @@ const ContactForm = () => {
         },
         (error) => {
           console.error('Error sending email:', error.text);
+          alert('@.@ Something went wrong try again later.');
         }
       );
   };

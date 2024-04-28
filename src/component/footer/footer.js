@@ -3,7 +3,7 @@ import './footer.css'
 const Footer = () => {
   return (
     <footer className="footer">
-        Copyright &#169; 2024 Tien Nguyen.
+         &#169; 2024 Tien Nguyen.
     </footer>
   )
 }
